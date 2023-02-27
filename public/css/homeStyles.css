@@ -1,0 +1,41 @@
+.buttons{
+    background: linear-gradient(180deg,#09c1c8 -22.63%,#6b5dbf 99.99%);
+}
+
+.buttons i{
+    font-size: 0.65rem;
+}
+
+.handwrite-text{
+    font-family: 'Julee', cursive;
+}
+
+.title-container{
+    margin-top: 8rem;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    row-gap: 2rem;
+    column-gap: 2rem;
+    justify-content: center;
+}
+
+.projects-container a{
+    aspect-ratio: 1;
+}
+
+.projects-container a:hover{
+    transform: translate(0.5rem,-0.5rem);
+}
+@media(min-width : 576px){
+    .projects-container{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+
+@media(min-width : 992px){
+    .projects-container{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+}
