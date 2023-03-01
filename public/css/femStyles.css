@@ -1,0 +1,36 @@
+main{
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255,255,255, 0.6)), url('/img/FME_background.jpg');
+    padding-top: 2rem;
+}
+
+.fem-projects-container{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+.fem-projects-container .card:hover{
+    transform: translate(0.25rem,-0.25rem);
+    border: 3px dashed #81c8e8;
+    filter: brightness(90%);
+}
+
+.git-icon:hover{
+    color: #6f7579 !important;
+    border: blue !important;
+}
+/* @media(min-width : 576px){
+    .title-container{
+        margin-top: 4rem;
+    }
+    .project{
+        grid-template-rows: minmax(0,7fr) minmax(0,3fr); 
+    }
+} */
+
+@media(min-width : 992px){
+    .fem-projects-container{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+}

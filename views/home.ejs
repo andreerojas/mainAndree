@@ -1,13 +1,15 @@
 <% layout('boilderplate') %>
 <% block('head').append('<link rel="stylesheet" href="/css/homeStyles.css">') %>
 
-<div class="container d-flex flex-column align-items-center mt-5">
-    <div class="presentation d-flex flex-column flex-md-row align-items-center justify-content-md-around w-100">
+<div class="presentation-container container-fluid d-flex flex-column align-items-center justify-content-center">
+    <div class="presentation d-flex flex-column flex-md-row align-items-center justify-content-around justify-content-md-around w-75 p-3">
         <img src="/img/profile_2.png" alt="profile picture" class="img-fluid order-md-2 rounded-circle">
         <div class="presentation-msg order-md-1 mt-3 d-flex flex-column align-items-center justify-content-center">
-            <p class="fs-2 fw-semibold">Hi, my name is Andree</p>
-            <p class="fs-2 fw-semibold">I am a web developer</p>
-            <a href="" class="btn btn-dark buttons d-flex align-items-center">RESUME <i class="bi bi-box-arrow-up-right ms-2"></i></a>
+            <p class="fs-1 fw-bold text-center">Andree Rojas</p>
+            <p class="fs-3 fw-semibold text-center">Software developer</p>  
+            <p class="fs-4 text-center"><i class="bi bi-geo-alt-fill me-3"></i> Milano, Italia</p>
+            <p class="fs-4 text-center"><i class="bi bi-telephone-fill me-3"></i>+39 3515808555</p>
+            <a href="https://drive.google.com/file/d/17cvPHgum2sVAVmX5YcVDJXjA3LEtBqqo/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-dark buttons d-flex align-items-center">RESUME <i class="bi bi-box-arrow-up-right ms-2"></i></a>
         </div>
     </div>
 </div>
@@ -18,10 +20,10 @@
 
 <div class="container mt-5 projects-container px-5">
     <%for(let project of projects){%>
-        <a href="<%= project.link %>" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
-            <div class="card border border-1 border-light rounded rounded-2 shadow">
-                <img src="<%= project.img %>" alt="project image" class="img-fluid rounded-top">
-                <div class="card-body">
+        <a href="<%= project.link %>" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark shadow">
+            <div class="project card border border-1 border-light rounded rounded-2 h-100">
+                <img src="<%= project.img %>" alt="project image" class="img-fluid rounded-top flex-shrink-1">
+                <div class="card-body flex-shrink-0">
                   <h3 class="card-title fs-4"><%= project.title %></h3>
                   <p class="card-text"><%= project.description %></p>
                 </div>

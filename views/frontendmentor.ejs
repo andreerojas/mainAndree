@@ -1,0 +1,24 @@
+<% layout('boilderplate') %>
+<% block('head').append('<link rel="stylesheet" href="/css/femStyles.css">') %>
+
+<div class="container d-flex flex-column">
+    <h2 class="fs-1 me-3 lh-1">FrontEndMentor projects</h2>
+    <div class="fem-projects-container mt-5">
+        <%for(let project of projects){%>
+            <div class="card border border-1 rounded rounded-2 text-dark shadow">
+                <img src="/img/fem_imgs/<%= project.img %>" alt="project image" class="img-fluid rounded-top">
+                <div class="card-body">
+                  <h3 class="card-title fs-4"><%= project.title %></h3>
+                  <div class="d-flex justify-content-between align-items-center my-3">
+                    <h4 class="fs-6 m-0"><span class="badge text-bg-success"><%=project.level%></span></h4>
+                    <a href="<%=project.githubLink%>" class="text-dark text-decoration-none fs-3 git-icon" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+                  </div>
+                  <div class="fem-links d-flex flex-column ">
+                    <a href="<%=project.challengeLink%>" class="text-decoration-none btn btn-dark w-100" target="_blank" rel="noopener noreferrer">Challenge description</a>
+                    <a href="<%=project.link%>" class="my-3 text-decoration-none btn btn-dark site-link w-100" target="_blank" rel="noopener noreferrer">View site</a>
+                  </div>
+                </div>
+            </div>
+        <%}%>
+    </div>
+</div>
